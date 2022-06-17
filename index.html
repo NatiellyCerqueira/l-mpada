@@ -1,0 +1,45 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lampada</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="lampadaapagada"> 
+        <img class="width_200px" src="https://cdn-0.imagensemoldes.com.br/wp-content/uploads/2020/05/L%C3%A2mpada-PNG-Incandescente.png" alt="lampada apagada">
+    </div>
+    <div id="lampadaacesa" class="display:none"> 
+        <img class="width_200px" src="https://arduinolivre.files.wordpress.com/2013/08/lampada_ligada.png" alt="lampada acesa">
+    </div>
+
+    <script>
+     function get(element){
+  return document.querySelector(element)
+}
+
+    function getLampadaApagada(){
+  return get("#lampadaapagada")
+}
+
+    function getLampadaAcesa(){
+  return get("#lampadaacesa")
+}
+
+  function lampadaApagada(){
+getLampadaApagada().style.display="none"
+getLampadaAcesa().style.dsplay="block" 
+}
+
+  function lampadaAcesa(){
+getLampadaAcesa().style.display="none"
+getLampadaApagada().style.dsplay ="block"
+} 
+
+getLampadaAcesa().addEventListener("click", lampadaAcesa)
+getLampadaApagada().addEventListener("click", lampadaApagada)
+
+    </script>
+</body>
+</html>
