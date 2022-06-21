@@ -26,15 +26,21 @@
     function getLampadaAcesa(){
       return get("#lampadaAcesa")
     }
+    
+    function backgroundColor(color){
+      get("body").style.backgroundColor = color
+    }
 
     function lampadaApagada(){
       getLampadaApagada().style.display="none"
-      getLampadaAcesa().style.display="block" 
+      getLampadaAcesa().style.display="block"
+      backgroundColor("black")
     }
 
     function lampadaAcesa(){
       getLampadaAcesa().style.display="none"
       getLampadaApagada().style.display ="block"
+      backgroundColor("white")
     } 
     
     getLampadaAcesa().addEventListener("click", lampadaAcesa)
